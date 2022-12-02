@@ -7,7 +7,7 @@
 
 
 ########### PART 1 ###########
-f = open('/inputs/d2.txt', 'r')
+f = open('inputs/d2.txt', 'r')
 score1 = 0
 
 for line in f:
@@ -37,25 +37,27 @@ print(score1)
 
 ########### PART 2 ###########
 score2 = 0
-f = open('/inputs/d2.txt', 'r')
+f = open('inputs/d2.txt', 'r')
 
 for line in f:
-    match line[0]:
-        case 'A':
-            match line[2]:
-                case 'X': score2 += 3
-                case 'Y': score2 += 3 + 1
-                case 'Z': score2 += 6 + 2
-    match line[0]:
-        case 'B':
-            match line[2]:
-                case 'X': score2 += 1
-                case 'Y': score2 += 3 + 2
-                case 'Z': score2 += 6 + 3
-    match line[0]:
-        case 'C':
-            match line[2]:
-                case 'X': score2 += 2
-                case 'Y': score2 += 3 + 3
-                case 'Z': score2 += 6 + 1
+    match line[2]:
+        case 'X':
+            match line[0]:
+                case 'A': score2 += 3
+                case 'B': score2 += 1
+                case 'C': score2 += 2
+    match line[2]:
+        case 'Y':
+            score2 += 3
+            match line[0]:
+                case 'A': score2 += 1
+                case 'B': score2 += 2
+                case 'C': score2 += 3
+    match line[2]:
+        case 'Z':
+            score2 += 6
+            match line[0]:
+                case 'A': score2 += 2
+                case 'B': score2 += 3
+                case 'C': score2 += 1
 print(score2)
