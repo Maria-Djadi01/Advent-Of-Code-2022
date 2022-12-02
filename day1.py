@@ -1,4 +1,4 @@
-f = open('d1.txt', 'r')
+f = open('/inputs/d1.txt', 'r')
 arr = []
 sum = 0
 i = 0

@@ -7,7 +7,7 @@
 
 
 ########### PART 1 ###########
-f = open('d2.txt', 'r')
+f = open('/inputs/d2.txt', 'r')
 score1 = 0
 
 for line in f:
@@ -37,7 +37,7 @@ print(score1)
 
 ########### PART 2 ###########
 score2 = 0
-f = open('d2.txt', 'r')
+f = open('/inputs/d2.txt', 'r')
 
 for line in f:
     match line[0]:
