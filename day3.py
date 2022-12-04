@@ -1,3 +1,5 @@
+########### PART 1 ###########
+
 f = open('inputs/d3.txt', 'r')
 sum1 = 0
 half_1 = []
@@ -11,6 +13,7 @@ for line in f:
             if ord(c) >= 97: sum1 += ord(c) - 96 
             break
 
+########### PART 2 ###########
 print(sum1)
 
 f = open('inputs/d3.txt', 'r')
